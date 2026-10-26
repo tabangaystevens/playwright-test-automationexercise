@@ -41,6 +41,6 @@ test('Test Case 1: Register User', async ({ page }) => {
   await expect(page.getByText('Logged in as', { exact: false })).toContainText(name);
 
   await page.getByRole('link', { name: /delete account/i }).click();
-  await expect(page.getByText('Account Deleted!!!!', { exact: true })).toBeVisible();
+  await expect(page.getByText('Account Deleted!', { exact: true })).toBeVisible();
   await page.locator('a[data-qa="continue-button"]').click();
 });
