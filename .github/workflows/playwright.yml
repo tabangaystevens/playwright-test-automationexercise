@@ -32,8 +32,10 @@ jobs:
         run: npm install
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
-      - name: Run tests
-        run: npm test
+      - name: Run Playwright tests
+        run: npx playwright test
+        # Ensure a non-zero Playwright exit code marks this step and the job as failed.
+        continue-on-error: false
       - name: Upload Playwright report
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
