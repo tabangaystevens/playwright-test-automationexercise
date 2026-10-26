@@ -1,6 +1,9 @@
 # Playwright Automation Exercise
 
-An initial Playwright test automation project covering [Automation Exercise test case 1: Register User](https://automationexercise.com/test_cases/).
+A Playwright test automation project covering [Automation Exercise test cases](https://automationexercise.com/test_cases/):
+
+- Test Case 1: Register User
+- Test Case 2: Login User with correct email and password
 
 ## Prerequisites
 
@@ -22,7 +25,7 @@ npm run test:ui
 npm run report
 ```
 
-The test creates a unique account on every run and deletes it at the end. Screenshots, video, and trace files are retained when a test fails.
+The tests create unique accounts on every run and delete them at the end. Test Case 2 provisions its own disposable account before validating the login flow, so it has no shared credential dependency. Screenshots, video, and trace files are retained when a test fails.
 
 ## CI
 
